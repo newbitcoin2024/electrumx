@@ -83,7 +83,7 @@ Install the prerequisites above.
 
 Check out the code from Github::
 
-    git clone https://github.com/spesmilo/electrumx.git
+    git clone https://github.com/newbitcoin2024/electrumx.git
     cd electrumx
 
 You can install with::
@@ -336,7 +336,7 @@ Here is typical log output on startup::
   INFO:BlockProcessor:using leveldb for DB backend
   INFO:BlockProcessor:created new database
   INFO:BlockProcessor:creating metadata diretcory
-  INFO:BlockProcessor:software version: ElectrumX 0.10.2
+  INFO:BlockProcessor:software version: ElectrumX 0.0.1
   INFO:BlockProcessor:DB version: 5
   INFO:BlockProcessor:coin: Bitcoin
   INFO:BlockProcessor:network: mainnet
@@ -345,12 +345,12 @@ Here is typical log output on startup::
   INFO:BlockProcessor:tx count: 0
   INFO:BlockProcessor:sync time so far: 0d 00h 00m 00s
   INFO:BlockProcessor:reorg limit is 200 blocks
-  INFO:Daemon:daemon at 192.168.0.2:8332/
+  INFO:Daemon:daemon at 192.168.0.2:9332/
   INFO:BlockProcessor:flushing DB cache at 1,200 MB
-  INFO:Controller:RPC server listening on localhost:8000
-  INFO:Prefetcher:catching up to daemon height 447,187...
-  INFO:Prefetcher:verified genesis block with hash 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
-  INFO:BlockProcessor:our height: 9 daemon: 447,187 UTXOs 0MB hist 0MB
+  INFO:Controller:RPC server listening on localhost:9332
+  INFO:Prefetcher:catching up to daemon height 13,187...
+  INFO:Prefetcher:verified genesis block with hash 000000ff07876d775b813db1deed3a27cb6019227cbc7db65c6bec2335336a85
+  INFO:BlockProcessor:our height: 9 daemon: 13,187 UTXOs 0MB hist 0MB
   INFO:BlockProcessor:our height: 52,509 daemon: 447,187 UTXOs 9MB hist 14MB
   INFO:BlockProcessor:our height: 85,009 daemon: 447,187 UTXOs 12MB hist 31MB
   INFO:BlockProcessor:our height: 102,384 daemon: 447,187 UTXOs 15MB hist 47MB
