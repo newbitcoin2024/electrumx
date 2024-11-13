@@ -72,7 +72,7 @@ class Coin:
     # Not sure if these are coin-specific
     RPC_URL_REGEX = re.compile('.+@(\\[[0-9a-fA-F:]+\\]|[^:]+)(:[0-9]+)?')
     VALUE_PER_COIN = 100000000
-    CHUNK_SIZE = 2016
+    CHUNK_SIZE = 2024
     BASIC_HEADER_SIZE = 80
     STATIC_BLOCK_HEADERS = True
     SESSIONCLS = ElectrumX
@@ -90,8 +90,8 @@ class Coin:
     WIF_BYTE = bytes.fromhex("80")
     ENCODE_CHECK = Base58.encode_check
     DECODE_CHECK = Base58.decode_check
-    GENESIS_HASH = ('000000000019d6689c085ae165831e93'
-                    '4ff763ae46a2a6c172b3f1b60a8ce26f')
+    GENESIS_HASH = ('000000ff07876d775b813db1deed3a27'
+                    'cb6019227cbc7db65c6bec2335336a85')
     GENESIS_ACTIVATION = 100_000_000
 
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 500
@@ -150,7 +150,7 @@ class Coin:
 
     @classmethod
     def max_fetch_blocks(cls, height):
-        if height < 130000:
+        if height < 1300:
             return 1000
         return 100
 
@@ -355,7 +355,7 @@ class BitcoinMixin:
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("0488b21e")
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
-    RPC_PORT = 8332
+    RPC_PORT = 9332
 
 
 class NameMixin:
@@ -635,7 +635,7 @@ class Bitcoin(BitcoinMixin, Coin):
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     TX_COUNT = 565436782
-    TX_COUNT_HEIGHT = 646855
+    TX_COUNT_HEIGHT = 13000
     TX_PER_BLOCK = 2200
     CRASH_CLIENT_VER = (3, 2, 3)
     BLACKLIST_URL = 'https://electrum.org/blacklist.json'
@@ -704,10 +704,10 @@ class BitcoinGold(EquihashMixin, BitcoinMixin, Coin):
     P2SH_VERBYTES = (bytes.fromhex("17"),)
     DESERIALIZER = lib_tx.DeserializerEquihashSegWit
     TX_COUNT = 265026255
-    TX_COUNT_HEIGHT = 499923
+    TX_COUNT_HEIGHT = 13000
     TX_PER_BLOCK = 50
     REORG_LIMIT = 1000
-    RPC_PORT = 8332
+    RPC_PORT = 9332
     PEERS = [
         'electrumx-eu.bitcoingold.org s50002 t50001',
         'electrumx-us.bitcoingold.org s50002 t50001'
